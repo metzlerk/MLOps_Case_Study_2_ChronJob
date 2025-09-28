@@ -8,6 +8,9 @@ id_ed25519
 # Log files
 *.log
 
+# Runtime files
+monitor.pid
+
 # Backup files
 *.backup
 *~
