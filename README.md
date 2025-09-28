@@ -4,21 +4,27 @@ Automatically detects when your server has been reset and secures it by replacin
 
 ## Quick Setup
 
-1. **Place your SSH key in this directory:**
+1. **Clone this repository:**
+   ```bash
+   git clone <repository-url>
+   cd ChronJob
+   ```
+
+2. **Place your SSH key in this directory:**
    ```bash
    # Copy your private key to:
-   /home/kjmetzler/ChronJob/student-admin_key
+   ./student-admin_key
    
    # Set correct permissions:
    chmod 600 student-admin_key
    ```
 
-2. **Install the cron job:**
+3. **Install the cron job:**
    ```bash
-   echo "*/3 * * * * /home/kjmetzler/ChronJob/server_security_monitor.sh >/dev/null 2>&1" | crontab -
+   echo "*/3 * * * * $(pwd)/server_security_monitor.sh >/dev/null 2>&1" | crontab -
    ```
 
-3. **Verify it's running:**
+4. **Verify it's running:**
    ```bash
    crontab -l
    ```
@@ -58,4 +64,9 @@ Edit `server_security_monitor.sh` to change:
 
 - Keep `student-admin_key` permissions at 600
 - Never share the private key
+- **The private key is excluded from git** (see `.gitignore`)
 - Monitor the log file for security alerts
+
+## Git Repository
+
+This project uses git for version control. The SSH private key and log files are automatically excluded from commits for security.
