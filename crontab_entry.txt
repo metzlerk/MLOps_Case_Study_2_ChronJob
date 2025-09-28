@@ -1,0 +1,5 @@
+# Server Security Monitor Cron Job
+# Runs every 3 minutes to check if server has been reset
+# If server is accessible with default credentials, it replaces authorized_keys
+
+*/3 * * * * /home/kjmetzler/ChronJob/server_security_monitor.sh >/dev/null 2>&1

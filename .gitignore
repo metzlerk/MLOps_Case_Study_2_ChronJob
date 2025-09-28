@@ -1,0 +1,18 @@
+# SSH Keys - NEVER commit private keys!
+student-admin_key
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Log files
+*.log
+
+# Backup files
+*.backup
+*~
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
