@@ -16,8 +16,8 @@ while true; do
     cd "$SCRIPT_DIR"
     ./server_security_monitor.sh
     
-    echo "[$(date)] Security check completed, sleeping for 3 minutes..." >> "$LOOP_LOG"
-    
-    # Wait 3 minutes (180 seconds)
-    sleep 180
+    echo "[$(date)] Security check completed, sleeping for 30 seconds..." >> "$LOOP_LOG"
+
+    # Wait 30 seconds
+    sleep 30
 done
